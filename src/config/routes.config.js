@@ -1,44 +1,90 @@
 export default [
   {
-    href: '/',
+    slug: '/',
     name: 'Home',
+    order: 0,
     protectedRoute: false,
-    order: 0
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
   },
   {
-    href: '/about',
+    slug: '/about',
     name: 'About',
+    order: 100,
     protectedRoute: false,
-    order: 1
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
   },
   {
-    href: '/news',
+    slug: '/news',
     name: 'News',
+    order: 200,
     protectedRoute: false,
-    order: 2
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
   },
   {
-    href: '/store',
+    slug: '/store',
     name: 'Store',
+    order: 300,
     protectedRoute: false,
-    order: 3
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
   },
   {
-    href: '/account',
+    slug: '/account',
     name: 'Account',
+    order: 400,
     protectedRoute: true,
-    order: 4
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
   },
   {
-    href: '/signup',
-    name: 'Sign Up',
-    protectedRoute: false,
-    order: 4
+    slug: '/collection',
+    name: 'Your Cards',
+    order: 450,
+    protectedRoute: true,
+    meta: {
+      title: 'Your cards collection',
+      description: 'Your collection of cards.',
+      keywords: ''
+    }
   },
   {
-    href: '/play',
+    slug: '/decks/new',
+    name: 'New Deck',
+    order: 450,
+    protectedRoute: true,
+    meta: {
+      title: 'Create new deck',
+      description: 'Create a new deck of from your card collection.',
+      keywords: ''
+    }
+  },
+  {
+    slug: '/play',
     name: 'Play',
-    protectedRoute: false,
-    order: 5
+    order: 500,
+    protectedRoute: true,
+    meta: {
+      title: '',
+      description: '',
+      keywords: ''
+    }
   }
 ];
