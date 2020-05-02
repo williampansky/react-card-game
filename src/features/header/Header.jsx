@@ -205,10 +205,10 @@ const Component = styled.div`
   }
 
   .play-button {
-    background-color: #986f45;
+    background-color: var(--theme-primary);
     border-radius: 2px;
     border: 0;
-    color: #f9f9f9;
+    color: #065174;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
