@@ -72,8 +72,8 @@ const ROUTES = {
     }
   },
   DECKS: {
-    path: '/decks/new',
-    name: 'New Deck',
+    path: '/decks',
+    name: 'Your Decks',
     slug: 'decks',
     order: 450,
     protectedRoute: true,
@@ -81,6 +81,14 @@ const ROUTES = {
       title: 'Create new deck',
       description: 'Create a new deck of from your card collection.',
       keywords: ''
+    },
+    children: {
+      NEW: {
+        path: '/new',
+        name: 'New Deck',
+        slug: 'new',
+        order: 100
+      }
     }
   },
   PLAY: {
