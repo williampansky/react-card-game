@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import Select from 'react-select';
-import EnergySlot from 'components/EnergySlot';
+import EnergySlot from 'components/collection/EnergySlot';
 
 export default function PlayerEnergy({ active, onClick, onChange }) {
   const isBigScreen = useMediaQuery({ query: '(min-width: 1200px)' });

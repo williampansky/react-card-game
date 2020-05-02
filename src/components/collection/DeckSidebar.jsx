@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { editDeckName, removeCard } from 'features/decks/decks.slice';
-import Deck from 'components/Deck';
+import Deck from 'components/collection/Deck';
 import { setSidebar } from 'features/sidebar/sidebar.slice';
 
 export default function DeckSidebar() {

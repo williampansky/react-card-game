@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import exists from 'utils/element.exists';
 import replaceConstant from 'utils/replace-constants';
-import DeckItem from 'components/DeckItem';
+import DeckItem from 'components/collection/DeckItem';
 
 export default function Deck({ data, length, onClick }) {
   let { deckId } = useParams();

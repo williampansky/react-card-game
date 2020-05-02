@@ -6,15 +6,15 @@ import { selectClass } from 'features/filters/filters.slice';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import CARDCLASS from 'enums/cardClass.enums';
-import CardGrid from 'components/CardGrid';
-import CardModal from 'components/CardModal';
+import CardGrid from 'components/collection/CardGrid';
+import CardModal from 'components/collection/CardModal';
 import ChooseClass from './ChooseClass';
 import DeleteDeckButton from './DeleteDeckButton';
 import exists from 'utils/element.exists';
 import Filters from 'features/filters/Filters.container';
 import replaceConstant from 'utils/replace-constants';
 import replaceDynamicText from 'utils/replace-dynamic-text';
-import Sidebar from 'components/Sidebar';
+import Sidebar from 'components/collection/Sidebar';
 
 export default function DeckBuilder() {
   let { deckId } = useParams();

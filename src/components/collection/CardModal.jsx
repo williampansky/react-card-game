@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Card from 'components/Card';
+import { useSelector } from 'react-redux';
+import Card from 'components/collection/Card';
 import createMarkup from 'utils/createMarkup';
-import EntourageCard from 'components/EntourageCard';
+import EntourageCard from 'components/collection/EntourageCard';
 import exists from 'utils/element.exists';
 import getConstantDescription from 'utils/get-constant-description';
 import replaceConstant from 'utils/replace-constants';
 import useHover from 'react-use-hover';
-import { useSelector } from 'react-redux';
 
 export default function CardModal({
   cardText,

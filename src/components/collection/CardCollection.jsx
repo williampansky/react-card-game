@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import CARDCLASS from 'enums/cardClass.enums';
-import CardGrid from 'components/CardGrid';
-import CardModal from 'components/CardModal';
+import CardGrid from 'components/collection/CardGrid';
+import CardModal from 'components/collection/CardModal';
 import exists from 'utils/element.exists';
 import replaceConstant from 'utils/replace-constants';
 import replaceDynamicText from 'utils/replace-dynamic-text';
 import Filters from 'features/filters/Filters.container';
-import Sidebar from 'components/Sidebar';
-import SidebarActivator from 'components/SidebarActivator';
+import Sidebar from 'components/collection/Sidebar';
+import SidebarActivator from 'components/collection/SidebarActivator';
 import { selectClass } from 'features/filters/filters.slice';
 
 export default function CardCollection() {
@@ -141,7 +141,7 @@ const Wrapper = styled.main`
 const GridWrapper = styled.div`
   background: #292928;
   position: fixed;
-  top: 0;
+  top: 80px;
   left: 0;
   padding: 20px;
   bottom: 80px;

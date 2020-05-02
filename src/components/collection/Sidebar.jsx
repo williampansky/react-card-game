@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-import DeckCollection from 'components/DeckCollection';
-import DeckSidebar from 'components/DeckSidebar';
+import DeckCollection from 'components/collection/DeckCollection';
+import DeckSidebar from 'components/collection/DeckSidebar';
 
 export default function Sidebar({ active }) {
   return (
@@ -25,7 +25,7 @@ const Component = styled.aside`
   background: #1e1e1e;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 80px;
   width: 300px;
   height: 100%;
   z-index: 3;

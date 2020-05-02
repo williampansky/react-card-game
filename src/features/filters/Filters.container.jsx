@@ -11,7 +11,7 @@ import {
 } from 'features/filters/filters.slice';
 import { setResults } from 'features/filtered-results.slice';
 import { useParams } from 'react-router-dom';
-import BackButton from 'components/BackButton';
+import BackButton from 'components/collection/BackButton';
 import ClassFilters from 'features/filters/ClassFilters';
 import EnergyFilters from 'features/filters/EnergyFilters';
 import MechanicsFilters from 'features/filters/MechanicsFilters';

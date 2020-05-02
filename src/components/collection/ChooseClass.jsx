@@ -8,8 +8,8 @@ import { selectClass } from 'features/filters/filters.slice';
 import CARDCLASS from 'enums/cardClass.enums';
 import exists from 'utils/element.exists';
 import Filters from 'features/filters/Filters.container';
-import Sidebar from 'components/Sidebar';
-import SidebarActivator from 'components/SidebarActivator';
+import Sidebar from 'components/collection/Sidebar';
+import SidebarActivator from 'components/collection/SidebarActivator';
 
 export default function ChooseClass() {
   let { deckId } = useParams();
