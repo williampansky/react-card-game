@@ -106,7 +106,7 @@ export default function EntourageCard({ data }) {
             <img
               alt=""
               className={`card__attack__badge`}
-              src={`assets/TCG_vol09_front-assets/ic_sword.png`}
+              src={`assets/images/ic_sword.png`}
             />
           </div>
           <div className={'card__health'} data-value={health}>
@@ -114,7 +114,7 @@ export default function EntourageCard({ data }) {
             <img
               alt=""
               className={`card__health__badge`}
-              src={`assets/TCG_vol09_front-assets/ic_shield.png`}
+              src={`assets/images/ic_shield.png`}
             />
           </div>
         </React.Fragment>
@@ -123,7 +123,7 @@ export default function EntourageCard({ data }) {
       <img
         alt=""
         className={`card__rarity__gem`}
-        src={`assets/Gem_Rarity_${replaceConstant(rarity)}.png`}
+        src={`assets/images/gems/Gem_Rarity_${replaceConstant(rarity)}.png`}
       />
 
       <div className={`card__type__image__wrapper`}>

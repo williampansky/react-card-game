@@ -61,7 +61,6 @@ export default function CardCollection() {
 
         <Footer sidebarActive={sidebarActive}>
           <Filters />
-          <SidebarActivator active={sidebarActive} />
         </Footer>
       </Wrapper>
 
