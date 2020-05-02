@@ -1,6 +1,16 @@
 // prettier-ignore
 :root {
   /* ================================ */
+  /* color vars */
+  --color-rarity-FREE:                          #a4bed3;
+  --color-rarity-COMMON:                        #81ff85;
+  --color-rarity-SUPERIOR:                      #7ad5ff;
+  --color-rarity-REMARKABLE:                    #a465ff;
+  --color-rarity-MYTHIC:                        #ebbd41;
+  --color-rarity-GOLDEN:                        #fbef31;
+
+
+  /* ================================ */
   /* layout vars */
   --board-theirHand-background-color:           #151515;
   --board-theirHand-height:                     45px;
