@@ -1,26 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import ROUTES from 'config/routes.config';
 
 // route views
-import LocalStorageHandler from 'components/LocalStorageHandler';
-import TheCardCollectionView from 'layout/TheCardCollectionView';
-import TheDeckBuilderView from './TheDeckBuilderView';
+import LocalStorageHandler from 'components/global/LocalStorageHandler';
+import Homepage from 'components/site/Homepage';
+import Header from 'features/header/Header';
+// import TheCardCollectionView from 'layout/TheCardCollectionView';
+// import TheDeckBuilderView from './TheDeckBuilderView';
 
 export default function TheMainView() {
-  const routes = useSelector(state => state.routes);
+  const { HOME } = ROUTES;
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>{routes.home.metaTitle}</title>
-        <meta name="description" content={routes.home.metaDescription} />
-      </Helmet>
+      <Header />
 
       <Switch>
-        <Route path={`/decks`} component={TheDeckBuilderView} />
-        <Route path={routes.home.path} component={TheCardCollectionView} />
+        {/* <Route path={`/decks`} component={TheDeckBuilderView} /> */}
+        <Route path={HOME.path} component={Homepage} />
       </Switch>
 
       <LocalStorageHandler />
