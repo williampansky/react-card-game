@@ -76,7 +76,10 @@ export default function DeckBuilder() {
   return (
     <React.Fragment>
       <Wrapper sidebarActive={sidebarActive}>
-        <GridWrapper className="_scrollable" sidebarActive={sidebarActive}>
+        <GridWrapper
+          className="_scrollable card-collection"
+          sidebarActive={sidebarActive}
+        >
           {deckClass ? (
             exists(database) ? (
               <CardGrid
@@ -175,7 +178,7 @@ const Wrapper = styled.main`
 const GridWrapper = styled.div`
   background: #292928;
   position: fixed;
-  top: 0;
+  top: 80px;
   left: 0;
   padding: 20px;
   bottom: 80px;

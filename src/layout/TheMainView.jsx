@@ -1,14 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 import ROUTES from 'config/routes.config';
 
 // route views
-import LocalStorageHandler from 'components/global/LocalStorageHandler';
-import Homepage from 'components/site/Homepage';
 import Header from 'features/header/Header';
+import Homepage from 'components/site/Homepage';
+import LocalStorageHandler from 'components/global/LocalStorageHandler';
 import TheCardCollectionView from 'layout/TheCardCollectionView';
-// import TheDeckBuilderView from './TheDeckBuilderView';
+import TheDeckBuilderView from 'layout/TheDeckBuilderView';
 
 export default function TheMainView() {
   const { HOME, ABOUT, NEWS, STORE, ACCOUNT, COLLECTION, DECKS, PLAY } = ROUTES;
@@ -18,7 +17,7 @@ export default function TheMainView() {
       <Header />
 
       <Switch>
-        {/* <Route path={`/decks`} component={TheDeckBuilderView} /> */}
+        <Route path={DECKS.path} component={TheDeckBuilderView} />
         <Route path={COLLECTION.path} component={TheCardCollectionView} />
         <Route path={HOME.path} component={Homepage} />
       </Switch>

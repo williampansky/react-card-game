@@ -82,6 +82,7 @@ const Component = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     background: none;
     outline: 0;
+    padding: 5px 20px 10px;
 
     &:focus {
       border-style: dashed;

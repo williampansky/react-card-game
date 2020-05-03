@@ -77,7 +77,7 @@ Deck.defaultProps = {
 };
 
 const Component = styled.div`
-  padding: 0 20px;
+  /* padding: 0 20px; */
   width: 100%;
   margin: 0 auto;
   z-index: 1;
@@ -87,12 +87,12 @@ const Component = styled.div`
     cursor: pointer;
   }
 
-  & > div + div {
+  .deck__item + .deck__item {
     margin-top: 2px;
   }
 
-  & > div:last-child {
-    margin-bottom: 20px;
+  .deck__item:last-child {
+    margin-bottom: 30px;
   }
 `;
 

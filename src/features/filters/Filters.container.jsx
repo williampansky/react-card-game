@@ -10,8 +10,6 @@ import {
   selectRarity
 } from 'features/filters/filters.slice';
 import { setResults } from 'features/filtered-results.slice';
-import { useParams } from 'react-router-dom';
-import BackButton from 'components/collection/BackButton';
 import ClassFilters from 'features/filters/ClassFilters';
 import EnergyFilters from 'features/filters/EnergyFilters';
 import MechanicsFilters from 'features/filters/MechanicsFilters';
@@ -20,7 +18,6 @@ import SetFilters from 'features/filters/SetFilters';
 import RarityFilters from './RarityFilters';
 
 export default function Filters() {
-  let { deckId } = useParams();
   const dispatch = useDispatch();
   const {
     availableCardClasses,
@@ -73,7 +70,6 @@ export default function Filters() {
 
   return (
     <Component>
-      {deckId ? <BackButton /> : null}
       <ClassFilters
         active={selectedCardClass}
         data={availableCardClasses}
