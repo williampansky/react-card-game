@@ -6,6 +6,7 @@ import ROUTES from 'config/routes.config';
 // route views
 // import TheCardCollectionView from 'layout/TheCardCollectionView';
 // import TheDeckBuilderView from './TheDeckBuilderView';
+import Header from 'features/header/Header';
 
 export default function Homepage() {
   const {
@@ -18,6 +19,7 @@ export default function Homepage() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Helmet>
+      <Header />
       <div style={{ marginTop: 80 }}>Homepage</div>
     </React.Fragment>
   );

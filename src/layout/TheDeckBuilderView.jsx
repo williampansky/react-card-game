@@ -4,9 +4,9 @@ import { Switch, Route, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ROUTES from 'config/routes.config';
 
-// route views
 import DeckBuilder from 'components/collection/DeckBuilderV2';
 import Decks from 'components/collection/Decks';
+import Header from 'features/header/Header';
 
 export default function TheDeckBuilderView() {
   const decks = useSelector(s => s.decks);
@@ -23,9 +23,11 @@ export default function TheDeckBuilderView() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
+      <Header />
+
       <Switch>
-        <Route path={DECKS.path} component={Decks} />
         <Route path={`/decks/:deckId`} component={DeckBuilder} />
+        <Route path={DECKS.path} component={Decks} />
       </Switch>
     </React.Fragment>
   );

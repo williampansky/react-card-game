@@ -1,5 +1,6 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Switch, Route, Link, useLocation } from 'react-router-dom';
 import ROUTES from 'config/routes.config';
 import styled from 'styled-components';
 
@@ -7,7 +8,9 @@ import styled from 'styled-components';
 // import TheCardCollectionView from 'layout/TheCardCollectionView';
 // import TheDeckBuilderView from './TheDeckBuilderView';
 
-export default function Header() {
+export default function Header({ activeRoute }) {
+  let location = useLocation();
+  const { pathname } = location;
   const { HOME, ABOUT, NEWS, STORE, ACCOUNT, COLLECTION, DECKS, PLAY } = ROUTES;
 
   return (
@@ -19,17 +22,17 @@ export default function Header() {
               HSclone
             </Link>
             <ul className="nav">
-              <li>
+              <li className={pathname.includes(ABOUT.path) ? 'active' : ''}>
                 <Link className="item" to={ABOUT.path}>
                   {ABOUT.name}
                 </Link>
               </li>
-              <li>
+              <li className={pathname.includes(NEWS.path) ? 'active' : ''}>
                 <Link className="item" to={NEWS.path}>
                   {NEWS.name}
                 </Link>
               </li>
-              <li>
+              <li className={pathname.includes(STORE.path) ? 'active' : ''}>
                 <Link className="item" to={STORE.path}>
                   {STORE.name}
                 </Link>
@@ -38,17 +41,19 @@ export default function Header() {
           </div>
           <div className="navbar-right">
             <ul className="nav">
-              <li>
+              <li className={pathname.includes(ACCOUNT.path) ? 'active' : ''}>
                 <Link className="item" to={ACCOUNT.path}>
                   {ACCOUNT.name}
                 </Link>
               </li>
-              <li>
+              <li
+                className={pathname.includes(COLLECTION.path) ? 'active' : ''}
+              >
                 <Link className="item" to={COLLECTION.path}>
                   {COLLECTION.name}
                 </Link>
               </li>
-              <li>
+              <li className={pathname.includes(DECKS.path) ? 'active' : ''}>
                 <Link className="item" to={DECKS.path}>
                   {DECKS.name}
                 </Link>
@@ -78,6 +83,10 @@ export default function Header() {
     </Component>
   );
 }
+
+Header.propTypes = {
+  activeRoute: PropTypes.string
+};
 
 const Component = styled.div`
   border: 0;
@@ -157,6 +166,14 @@ const Component = styled.div`
 
   .navbar .item:hover,
   .navbar .item:focus {
+    color: white;
+
+    &:before {
+      right: 15px;
+    }
+  }
+
+  .navbar .active > .item {
     color: white;
 
     &:before {

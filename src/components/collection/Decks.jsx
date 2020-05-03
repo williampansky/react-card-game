@@ -8,6 +8,7 @@ import { newDeck } from 'features/decks/decks.slice';
 import { selectClass } from 'features/filters/filters.slice';
 import CARDCLASS from 'enums/cardClass.enums';
 import exists from 'utils/element.exists';
+import DeckSlot from 'features/decks/DeckSlot';
 
 export default function Decks() {
   let { deckId } = useParams();
@@ -50,34 +51,18 @@ export default function Decks() {
               index = index + 1;
               const { name } = deck;
               const deckClass = deck && deck.class;
-              return name ? (
+              return (
                 <Link
-                  className="deck__slot"
+                  className="deck__slot uk-animation-slide-bottom-small"
                   key={index}
+                  style={{ animationDelay: `${index}00ms` }}
                   to={{ pathname: `/decks/${index}` }}
                 >
-                  <div className="class__badge--wrapper">
-                    <img
-                      alt=""
-                      className="class__badge"
-                      src={badgeSrc(deckClass)}
-                    />
-                  </div>
-                  <div className="text">
-                    <span className="text__value index">{name}</span>
-                    <span className="text__value plus">{`Edit Deck`}</span>
-                  </div>
-                </Link>
-              ) : (
-                <Link
-                  className="deck__slot"
-                  key={index}
-                  to={{ pathname: `/decks/${index}` }}
-                >
-                  <div className="text">
-                    <span className="text__value index">{index}</span>
-                    <span className="text__value plus">{`New Deck`}</span>
-                  </div>
+                  <DeckSlot
+                    deckClass={deckClass}
+                    deckName={name}
+                    slotIndex={index}
+                  />
                 </Link>
               );
             })}
@@ -115,11 +100,9 @@ const ClassGrid = styled.div`
 
   .deck__slot {
     cursor: pointer;
-    position: relative;
-    text-align: center;
-    height: 250px;
     width: 100%;
     margin: 0 auto;
+    text-decoration: none !important;
   }
 
   .deck__slot .class__name {
